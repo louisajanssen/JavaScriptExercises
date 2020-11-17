@@ -5,11 +5,17 @@ function transposeTwoStrings(array) {
     var result = '';
 
     for (var i = 0; i < string1.length; i++) {
-        result += string1[i] + ' ' + string2[i] + '\n'
+        result += string1[i] + ' ' + string2[i]
+
+        if (i !== string1.length - 1 && i !== string2.length -1) {
+            result += '\n'
+        }
     }
+
 
     return result;
 }
+
 
 var output = transposeTwoStrings(['Hello','World']);
 console.log(output);
